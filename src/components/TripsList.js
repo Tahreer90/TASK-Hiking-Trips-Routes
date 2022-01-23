@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import tripsData from '../tripsData';
-import SearchBar from './SearchBar';
-import TripItem from './TripItem';
+import React, { useState } from "react";
+import tripsData from "../tripsData";
+import SearchBar from "./SearchBar";
+import TripItem from "./TripItem";
 
 function TripsList() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const trips = tripsData
     .filter((trip) => trip.name.toLowerCase().includes(query.toLowerCase()))
     .map((trip) => <TripItem trip={trip} />);
   return (
-    <section class="page-section portfolio" id="portfolio">
-      <div class="container">
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+    <section className="page-section portfolio" id="portfolio">
+      <div className="container">
+        <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
           Explore Trips
         </h2>
         <br />
